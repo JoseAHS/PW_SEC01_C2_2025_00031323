@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML & CSS: Curso práctico avanzado</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content container">
+      <h1 id="main-title">HTML &amp; CSS: Curso práctico avanzado</h1>
+      <div class="actions">
+        <button id="btnChangeTitle" class="btn">Cambiar título</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+
+    <!-- Aside: Datos del libro + imagen dinámica -->
+    <aside class="sidebar" aria-labelledby="datosTitulo">
+      <h2 id="datosTitulo" class="section-title">Datos del libro</h2>
+      <ul class="datos">
+        <li><strong>Autor:</strong> Jane Doe</li>
+        <li><strong>Editorial:</strong> Frontend Press</li>
+        <li><strong>Año:</strong> 2025</li>
+        <li><strong>ISBN:</strong> 978-1-2345-6789-0</li>
+        <li><strong>Páginas:</strong> 320</li>
+        <li><strong>Idioma:</strong> Español</li>
+      </ul>
+
+      <div id="zonaImagen" class="zona-imagen" aria-live="polite">
+        <p class="hint">Aquí aparecerá la imagen agregada.</p>
+      </div>
+
+      <button id="btnAddImage" class="btn btn-accent">Agregar imagen</button>
+
+      <!-- Inputs para soporte de imagen local o por URL -->
+      <input type="file" id="fileInput" accept="image/*" hidden />
+    </aside>
+
+    <!-- Columna principal: Descripción y Contenido -->
+    <section class="content">
+      <article class="descripcion">
+        <h2 id="subtitulo" class="section-title">Descripción del libro</h2>
+        <button id="btnColorSub" class="btn btn-description">Cambiar color descripción</button>
+        <p id="parrafoDescripcion">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum, turpis non ullamcorper
+          vestibulum, dolor orci feugiat est, vitae varius quam erat at velit. Suspendisse potenti.
+          Aenean a felis a sem consequat pretium. Curabitur non pharetra nisi. Praesent egestas, lacus
+          sed faucibus molestie, urna magna placerat diam, vitae elementum arcu nulla in risus.
+        </p>
+      </article>
+
+      <section class="contenido-libro" aria-labelledby="contenidoTitulo">
+        <div class="contenido-header">
+          <h2 id="contenidoTitulo" class="section-title">Contenido del libro</h2>
+           <button id="btnToggleLayout" class="btn">Ver en filas</button>
+        </div>
+        <div id="gridContenido" class="grid">
+          <div class="card">
+            <h3>Capítulo 1</h3>
+            <p>Introducción a HTML: estructura básica, etiquetas, atributos y buenas prácticas.</p>
+          </div>
+          <div class="card">
+            <h3>Capítulo 2</h3>
+            <p>CSS esencial: selectores, modelo de caja, tipografía y sistema de colores.</p>
+          </div>
+          <div class="card">
+            <h3>Capítulo 3</h3>
+            <p>Diseño responsive: flexbox, grid y técnicas modernas de maquetación.</p>
+          </div>
+          <div class="card">
+            <h3>Capítulo 4</h3>
+            <p>JavaScript básico: DOM, eventos y manipulación de contenido.</p>
+          </div>
+          <div class="card">
+            <h3>Capítulo 5</h3>
+            <p>Buenas prácticas, accesibilidad web y optimización de rendimiento.</p>
+          </div>
+          <div class="card">
+            <h3>Capítulo 6</h3>
+            <p>Proyecto final: construcción de una landing page moderna con HTML, CSS y JS.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; 2025 Proyecto practico PW José Hernández 00031323.</small>
+    </div>
+  </footer>
+</body>
+</html>
